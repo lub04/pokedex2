@@ -6,16 +6,15 @@ const pokemonList = [
   },
   {
     name: "mew",
+
   },
 
 ];
 
-const PokemonCard = () => {
-  const cards = []
-  for (let i = 0; i < pokemonList.length; i++) {
-    const pokemon = pokemonList[i];
-    const card = (
-      <figure key={i}>
+const PokemonCard = () => { 
+    const pokemon = pokemonList[1];
+    return (
+      <figure >
         {pokemon.hasOwnProperty('imgSrc') ? (
           <img src={pokemon.imgSrc} alt={pokemon.name} />
         ) : (
@@ -24,9 +23,5 @@ const PokemonCard = () => {
         <figcaption>{pokemon.name}</figcaption>
       </figure>
     );
-    cards.push(card);
-  }
-
-  return <div>{cards}</div>;
 };
 export default PokemonCard ;
