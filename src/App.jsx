@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import PokemonCard from "./components/PokemonCard"
-const pokemonList = [
 
+
+
+const pokemonList = [
   {  
       name: "bulbasaur",
       imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",  
@@ -25,9 +27,20 @@ const pokemonList = [
   ];
 
 function App() {
+  const [pokemonIndex, setPokemonIndex] = useState(0);
+  const handleClickNext =() =>{
+    setPokemonIndex(pokemonIndex + 1)
+  }
+  const handleClickPrev =() =>{
+    setPokemonIndex(pokemonIndex - 1)
+  }
   return (
       <div>
-        <PokemonCard pokemon={pokemonList[3]}/>
+        <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
+        
+        {(pokemonIndex > 0) ? (<button onClick={handleClickPrev}>Précédent</button>) : null}
+        {(pokemonIndex < pokemonList.length - 1) ? (<button onClick={handleClickNext}>Suivant</button>) : null}
+
       </div>
   )
 }
