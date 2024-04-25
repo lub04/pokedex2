@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const PokemonCard = ({ pokemon }) => { 
     return (
-      <figure >
+      <figure className="carte">
         {pokemon.imgSrc ? (
           <img src={pokemon.imgSrc} alt={pokemon.name} />
         ) : (

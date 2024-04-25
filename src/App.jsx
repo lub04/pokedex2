@@ -8,21 +8,26 @@ const pokemonList = [
   {  
       name: "bulbasaur",
       imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",  
+      cls: " plant",
     },  
     {
       name: "charmander",
       imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      cls: " fire",
     },
     {
       name: "squirtle",
       imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      cls: " water",
     }, 
     {
       name: "pikachu",
       imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png", 
+      cls: " electric",
     },
     {
-      name: "mew",
+      name: " mew",
+      cls: " psy",
     },
   ];
 
@@ -32,9 +37,11 @@ function App() {
     setPokemonIndex(index)
   }
   return (
-      <div>
+      <div className={"pok-card" + pokemonIndex.cls}>
         <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-        <NavBar pokemonI = {pokemonIndex} setPokemonI={setPokemonIndex} clic ={handleClic} list={pokemonList}/>
+        <div className='choose-pok'>
+          <NavBar pokemonI = {pokemonIndex} setPokemonI={setPokemonIndex} clic ={handleClic} list={pokemonList}/>
+        </div>
       </div>
   )
 }

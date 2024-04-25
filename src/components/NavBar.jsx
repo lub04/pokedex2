@@ -5,7 +5,7 @@ const NavBar = ({ clic, list, pokemonI, setPokemonI }) => {
   return(
     <>
       {list.map((pokemon, index) => (
-        <button key ={index}  onClick={() =>clic(index)}>{pokemon.name}</button>
+        <button className="choose" key ={index}  onClick={() =>clic(index)}>{pokemon.name}</button>
       ))}
     </>
   )
