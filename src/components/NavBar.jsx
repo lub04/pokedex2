@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-const NavBar = ({ pokemonI, previous, next, list }) => {
+const NavBar = ({ clic, list, pokemonI, setPokemonI }) => {
+  
   return(
     <>
-      {(pokemonI > 0) ? (<button onClick={previous}>Précédent</button>) : null}
-      {(pokemonI < list.length - 1) ? (<button onClick={next}>Suivant</button>) : null}
+      {list.map((pokemon, index) => (
+        <button key ={index}  onClick={() =>clic(index)}>{pokemon.name}</button>
+      ))}
     </>
   )
 }
