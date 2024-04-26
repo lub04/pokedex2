@@ -16,7 +16,8 @@
     font-size: 2rem;
     width: 100%;
     img {
-      width: 70%;
+      width: 17rem;
+      height: 22rem;
     }
   }
 }
@@ -24,13 +25,13 @@
   background-color: lightblue;
 }
 .electric{
-  background-color: lightyellow;
+  background-color: rgb(255, 255, 157);
 }
 .fire{
   background-color: lightcoral;
 }
 .psy{
-  background-color:blueviolet;
+  background-color:rgb(187, 135, 235);
 }
 .plant{
   background-color: lightgreen;

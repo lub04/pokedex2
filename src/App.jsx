@@ -27,6 +27,7 @@ const pokemonList = [
     },
     {
       name: " mew",
+      imgSrc: "https://www.pngmart.com/files/22/Mew-Pokemon-Transparent-Images-PNG.png",
       cls: " psy",
     },
   ];
